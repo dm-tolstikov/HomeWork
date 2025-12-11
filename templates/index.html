@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get IP</title>
+</head>
+<body>
+    <h1>Получение IP-адреса</h1>
+
+    <p><strong>Переменная окружения TYPE:</strong> {{ env_api }}</p>
+
+    <p><strong>Текущий API:</strong> {{ api_name }}</p>
+
+    <p><strong>JSON:</strong> {"myIP": "{{ ip_address if ip_address else 'Ошибка' }}"}</p>
+</body>
+</html>

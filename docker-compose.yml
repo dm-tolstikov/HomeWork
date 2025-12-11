@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  ipapi-app:
+    build: .
+    ports:
+      - "5001:5000"
+    environment:
+      - TYPE=ipapi
+    volumes:
+      - ./data:/app/data
+    container_name: ip-app-ipapi
+
+  jsonip-app:
+    build: .
+    ports:
+      - "5002:5000"
+    environment:
+      - TYPE=jsonip
+    volumes:
+      - ./data:/app/data
+    container_name: ip-app-jsonip
