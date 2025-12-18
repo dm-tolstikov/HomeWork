@@ -3,7 +3,11 @@ import json
 import requests
 from flask import Flask, jsonify, render_template
 
+from prometheus_flask_exporter import PrometheusMetrics
+
+
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 
 
 def get_ip_from_ipapi():
